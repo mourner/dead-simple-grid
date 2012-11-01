@@ -9,20 +9,16 @@ Dead Simple Grid is a responsive CSS grid micro framework by [Vladimir Agafonkin
  * infinite nesting
  * incredibly flexible (use any column ratios and media query breakpoints)
 
-It also embraces concepts of progressive enhancement and mobile first design, serving one-column mobile layout to older browsers (IE6-8).
+It embraces concepts of progressive enhancement and mobile first design, serving one-column mobile layout to older browsers (IE6-8).
 
 [Dead Simple Grid Demo](http://mourner.github.com/dead-simple-grid)
 
-## Basic Example
+### Basic Example
 
 ```html
 <div class="row">
-	<div class="col sidebar">
-		...
-	</div>
-	<div class="col content">
-		...
-	</div>
+	<div class="col content"> ... </div>
+	<div class="col sidebar"> ... </div>
 </div>
 ```
 
@@ -32,3 +28,10 @@ It also embraces concepts of progressive enhancement and mobile first design, se
 	.sidebar { width: 33.33%; }
 }
 ```
+
+### Thanks
+
+This tiny work was inspired by the following articles:
+
+ * [.net magazine - Building a Modern Grid System](http://www.netmagazine.com/tutorials/building-modern-grid-system) by [Jonathan Smiley](http://www.zurb.com/about/profile/jonathan-smiley)
+ * [Smashing Magazine - Looking Beyond Common Media Query Breakpoints](http://mobile.smashingmagazine.com/2012/10/24/beyond-common-media-query-breakpoints/) by [Drew Thomas](http://brolik.com)
