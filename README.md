@@ -12,7 +12,8 @@ Dead Simple Grid is a responsive CSS grid micro framework by [Vladimir Agafonkin
 It embraces concepts of progressive enhancement and mobile first, serving one-column mobile layout to older browsers (IE 6-7). IE 8 is supported if you use [Respond.js](https://github.com/scottjehl/Respond).
 
 [View Demo](http://mourner.github.com/dead-simple-grid)<br>
-[Download grid.css](https://raw.github.com/mourner/dead-simple-grid/gh-pages/css/grid.css)
+[View grid.css](https://raw.github.com/mourner/dead-simple-grid/gh-pages/css/grid.css)
+[Download](https://github.com/mourner/dead-simple-grid/zipball/gh-pages)
 
 ### Basic Example
 
