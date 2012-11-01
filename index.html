@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<title>Dead Simple Grid</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<!-- a grid framework in 240 bytes? are you kidding me?! -->
+	<link rel="stylesheet" href="css/grid.css">
+
+	<!-- all the important responsive layout stuff goes here -->
+	<style>
+		.container {
+			max-width: 90em;
+		}
+
+		@media only screen and (min-width: 34em) {
+			.feature, .info { width: 50%; }
+		}
+
+		@media only screen and (min-width: 52em) {
+			.content { width: 66.66%; }
+			.sidebar { width: 33.33%; }
+			.info { width: 100%; }
+		}
+
+		@media only screen and (min-width: 80em) {
+			.content { width: 58.33% }
+			.sidebar { width: 41.66% }
+			.info { width: 50%; }
+		}
+	</style>
+
+	<!-- general boring stuff and some visual tweaks -->
+	<link rel="stylesheet" href="css/screen.css">
+
+</head>
+<body>
+
+<div class="container">
+
+	<div class="row">
+		<div class="col">
+			<h1>Dead Simple Grid</h1>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col content">
+			<h2>A Really Nice and Meaningful Title</h2>
+			<p>A demo of <em>Dead Simple Grid</em> concept by <a href="http://agafonkin.com/en">Vladimir Agafonkin</a>. <em>View the source</em> and check it out <a href="http://github.com/mourner/dead-simple-grid">on GitHub</a>!</p>
+			<p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
+
+			<div class="row">
+				<div class="col feature">
+					<h4>Feature Block One</h4>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				</div>
+
+				<div class="col feature">
+					<h4>Feature Block Two</h4>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				</div>
+			</div>
+
+			<h3>And One Last Thing</h3>
+
+			<p>Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+		</div>
+
+		<div class="col sidebar">
+
+			<h2>A Simple Sidebar</h2>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+
+			<div class="row">
+				<div class="col info">
+					<h4>Info Block One</h4>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+				</div>
+
+				<div class="col info">
+					<h4>Info Block Two</h4>
+
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+				</div>
+			</div>
+		</div>
+</div>
+
+</body>
+</html>
