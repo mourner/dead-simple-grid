@@ -6,12 +6,13 @@ Dead Simple Grid is a responsive CSS grid micro framework by [Vladimir Agafonkin
  * tiny (about 250 bytes of CSS), no dependencies
  * only two classes (`row` and `col`)
  * fluid columns with fixed gutters
- * infinite nesting
+ * supports infinite nesting
  * incredibly flexible (use any column ratios and media query breakpoints)
 
-It embraces concepts of progressive enhancement and mobile first design, serving one-column mobile layout to older browsers (IE6-8).
+It embraces concepts of progressive enhancement and mobile first, serving one-column mobile layout to older browsers (IE 6-8).
 
-[Dead Simple Grid Demo](http://mourner.github.com/dead-simple-grid)
+[View Demo](http://mourner.github.com/dead-simple-grid)
+[Download grid.css](https://raw.github.com/mourner/dead-simple-grid/gh-pages/css/grid.css)
 
 ### Basic Example
 
