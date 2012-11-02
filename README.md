@@ -29,7 +29,7 @@ It embraces concepts of progressive enhancement and mobile first, serving one-co
 }
 ```
 
-You only need `width` to set up columns; all columns are 100%-width by default, so we start from a mobile layout and gradually improve layout on different media query breakpoints depending on available screen space by setting widths in simple percentages. No other styles, classes or complex calculations required. As simple as that.
+You only need `width` to set up columns; all columns are 100%-width by default, so we start from a one-column mobile layout and gradually improve it on different media query breakpoints according to available screen space (by setting widths in simple percentages). No other styles, classes or complex calculations required. As simple as that.
 
 ### Explanation
 
@@ -43,7 +43,12 @@ All `col` elements are places inside clearfixed `row` elements and have `float: 
 
 Need to turn 3 one-column elements into 3 columns? Set their width to `33.33%` and you're all set. Need to switch a 2-column block back to one-column mode? Set their width to `100%`. Forget about messing with classes or SASS/Less mixins and formulas.
 
-Why not define classes like `span_1_of_3` for common column widths, you say? Because this defies the purpose of true responsive design! You need to adapt *your whole grid setup* to the viewport, not just column widths, depending on *content* and its importance. For example, you can't make 3 one-third columns turn into 1 column followed by 2 half columns with standard grid frameworks. Moreover, because of the sheer simplicity of the column set up, it doesn't take more time than figuring out what classes to add to your elements.
+
+#### No Width Classes
+
+Why not define classes like `span_1_of_3` for common column widths, you say? Because this defies the purpose of true responsive design! You need to adapt *your whole grid setup* to the viewport, not just column widths, depending on *content* and its importance.
+
+For example, you can't make 3 one-third columns turn into 1 column followed by 2 half columns with standard grid frameworks. Moreover, because of the sheer simplicity of the column set up, it doesn't take more time than figuring out what classes to add to your elements.
 
 #### Infinite Nesting
 
