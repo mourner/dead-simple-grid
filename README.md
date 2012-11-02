@@ -45,7 +45,7 @@ The `box-sizing` property is widely supported, starting from IE 8. CSS3 Media qu
 
 Nested `row` elements get negative margin on the sides that corresponds to gutter padding of `col` elements:
 
-```
+```css
 .col      { padding: 0  1.5em; }
 .row .row { margin:  0 -1.5em; }
 ```
@@ -57,6 +57,8 @@ This way you can nest rows inside columns infinitely, building layouts of any co
 All `col` elements are places inside clearfixed `row` elements and have `float: left; width: 100%` set by default. This means that you only need to change `width` to set up columns &mdash; no other properties required.
 
 Need to turn 3 one-column elements into 3 columns? Set their width to `33.33%` and you're all set. Need to switch a 2-column block back to one-column mode? Set their width to `100%`. Forget about messing with classes or SASS/Less mixins and formulas.
+
+Why not define classes like `span_1_of_3` for common column widths, you say? Because this defies the purpose of true responsive design! You need to adapt your whole grid set up to the viewport, not just column widths, depending on content and its importance. For example, you can't make 3 one-third columns turn into 1 column followed by 2 half columns with standard grid frameworks. And because of the sheer simplicity of the column set up, it doesn't take more time than figuring out what classes to add to your elements.
 
 ### Thanks
 
