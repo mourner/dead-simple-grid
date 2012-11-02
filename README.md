@@ -35,11 +35,15 @@ You start from one-column layout (all `col` elements have 100% width by default)
 
 #### Fixed Gutters and Box Sizing
 
-Fixed gutter widths for columns are set as padding combined with `box-sizing: border-box` for `col` elements. This  means that your fluid design can finally have consistent whitespace, and you don't need to mess with weird percentages like `margin: 0 1.337%` and related column width calculations. Need a one-third column? Set its width to `66.66%` and padding to any value you like (DSG sets 1.5em by default).
+Fixed gutter widths for columns are set as padding combined with `box-sizing: border-box` for `col` elements. This  means that your fluid design can finally have consistent whitespace, and you don't need to mess with weird percentages like `margin: 0 1.337%` and related column width calculations. Need a one-third column? Set its width to `33.33%` and padding to any value you like (DSG sets 1.5em by default).
 
-#### Mobile First and Browser Support
+#### Column Setup
 
-The `box-sizing` property is widely supported, starting from IE 8. CSS3 Media queries are supported by all modern browsers, and a polyfill (Respond.js) can be used to cover IE 8. Due to mobile first approach (we start from one column layout and build from there), older browsers which don't support both features (e.g. IE 6-7) receive the mobile layout which is perfectly accessible. So you have everyone covered nicely.
+All `col` elements are places inside clearfixed `row` elements and have `float: left; width: 100%` set by default. This means that you only need to change `width` to set up columns &mdash; no other properties required.
+
+Need to turn 3 one-column elements into 3 columns? Set their width to `33.33%` and you're all set. Need to switch a 2-column block back to one-column mode? Set their width to `100%`. Forget about messing with classes or SASS/Less mixins and formulas.
+
+Why not define classes like `span_1_of_3` for common column widths, you say? Because this defies the purpose of true responsive design! You need to adapt *your whole grid setup* to the viewport, not just column widths, depending on *content* and its importance. For example, you can't make 3 one-third columns turn into 1 column followed by 2 half columns with standard grid frameworks. Moreover, because of the sheer simplicity of the column set up, it doesn't take more time than figuring out what classes to add to your elements.
 
 #### Infinite Nesting
 
@@ -52,13 +56,9 @@ Nested `row` elements get negative margin on the sides that corresponds to gutte
 
 This way you can nest rows inside columns infinitely, building layouts of any complexity. Feel free to change the value `1.5em` to anything you like (or even different for various elements).
 
-#### Column Setup
+#### Mobile First and Browser Support
 
-All `col` elements are places inside clearfixed `row` elements and have `float: left; width: 100%` set by default. This means that you only need to change `width` to set up columns &mdash; no other properties required.
-
-Need to turn 3 one-column elements into 3 columns? Set their width to `33.33%` and you're all set. Need to switch a 2-column block back to one-column mode? Set their width to `100%`. Forget about messing with classes or SASS/Less mixins and formulas.
-
-Why not define classes like `span_1_of_3` for common column widths, you say? Because this defies the purpose of true responsive design! You need to adapt your whole grid set up to the viewport, not just column widths, depending on content and its importance. For example, you can't make 3 one-third columns turn into 1 column followed by 2 half columns with standard grid frameworks. And because of the sheer simplicity of the column set up, it doesn't take more time than figuring out what classes to add to your elements.
+The `box-sizing` property is widely supported, starting from IE 8. CSS3 Media queries are supported by all modern browsers, and a polyfill (Respond.js) can be used to cover IE 8. Due to mobile first approach (we start from one column layout and build from there), older browsers which don't support both features (e.g. IE 6-7) receive a mobile layout which is perfectly accessible. So you have everyone covered nicely.
 
 ### Thanks
 
