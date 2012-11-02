@@ -9,9 +9,12 @@
 	<!-- a grid framework in 250 bytes? are you kidding me?! -->
 	<link rel="stylesheet" href="css/grid.css">
 
-	<!-- all the important responsive layout stuff goes here -->
+	<!-- all the important responsive layout stuff -->
 	<style>
 		.container { max-width: 90em; }
+
+		/* you only need width to set up columns; all columns are 100%-width by default, so we start
+		   from a mobile layout and gradually improve layout depending on available screen space */
 
 		@media only screen and (min-width: 34em) {
 			.feature, .info { width: 50%; }

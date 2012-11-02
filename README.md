@@ -29,7 +29,7 @@ It embraces concepts of progressive enhancement and mobile first, serving one-co
 }
 ```
 
-You start from one-column layout (all `col` elements have 100% width by default), and then set up columns for different media query breakpoints through widths in simple percentages. No other styles, classes or calculations required. As simple as that.
+You only need `width` to set up columns; all columns are 100%-width by default, so we start from a mobile layout and gradually improve layout on different media query breakpoints depending on available screen space by setting widths in simple percentages. No other styles, classes or complex calculations required. As simple as that.
 
 ### Explanation
 
