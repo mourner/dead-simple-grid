@@ -7,7 +7,7 @@ a {
 	color: #06f;
 }
 h1 {
-	font-size: 2.2em;
+	font-size: 2.4em;
 }
 h2 {
 	font-size: 1.4em;
@@ -37,6 +37,14 @@ p, ul {
 .desc {
 	color: #888;
 }
+.intro {
+	border-bottom: 1px dotted #bbb;
+	padding-bottom: 1.5em;
+}
+.social {
+	border-top: 1px dotted #bbb;
+	padding-top: 1.5em;
+}
 
 /* minor responsive adjustments */
 
@@ -60,7 +68,7 @@ p, ul {
 		font-size: 3em;
 	}
 	h2 {
-		font-size: 1.8em;
+		font-size: 1.7em;
 	}
 }
 
