@@ -7,7 +7,7 @@ a {
 	color: #06f;
 }
 h1 {
-	font-size: 2.4em;
+	font-size: 2.2em;
 }
 h2 {
 	font-size: 1.4em;
@@ -20,9 +20,13 @@ h3, h4 {
 }
 
 p, ul {
-	font-size: 14px;
+	font-size: 0.8125em;
 	line-height: 1.5;
 	margin: 0 0 1.5em;
+}
+code {
+	font-size: 1.2727em;
+	color: #777;
 }
 iframe {
 	border: 0;
@@ -61,12 +65,32 @@ iframe {
 }
 
 @media only screen and (min-width: 34em) {
+	p, ul {
+		font-size: 0.875em;
+	}
 	.feature:first-child,
 	.info:first-child {
 		border-right: 1px dotted #aaa;
 	}
 	.container {
 		padding: 1em;
+	}
+	h1 {
+		font-size: 2.6em;
+	}
+	h2 {
+		font-size: 1.6em;
+	}
+}
+
+@media only screen and (min-width: 54em) {
+	.content {
+		border: none;
+		border-right: 1px dotted #aaa;
+		margin-bottom: 0;
+	}
+	.info:first-child {
+		border: none;
 	}
 	h1 {
 		font-size: 3em;
@@ -76,19 +100,14 @@ iframe {
 	}
 }
 
-@media only screen and (min-width: 52em) {
-	.content {
-		border: none;
-		border-right: 1px dotted #aaa;
-		margin-bottom: 0;
-	}
-	.info:first-child {
-		border: none;
-	}
-}
-
-@media only screen and (min-width: 80em) {
+@media only screen and (min-width: 76em) {
 	.info:first-child {
 		border-right: 1px dotted #aaa;
+	}
+	h1 {
+		font-size: 3.2em;
+	}
+	h2 {
+		font-size: 1.8em;
 	}
 }
