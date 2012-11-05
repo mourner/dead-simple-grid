@@ -9,7 +9,7 @@ Dead Simple Grid is a responsive CSS grid micro framework by [Vladimir Agafonkin
  * supports infinite nesting
  * incredibly flexible (use any column setup and media query breakpoints)
 
-It embraces concepts of progressive enhancement and mobile first, serving one-column mobile layout to ancient browsers like IE 6-7. IE 8 is supported if you use [Respond.js](https://github.com/scottjehl/Respond).
+It embraces concepts of progressive enhancement and mobile first, serving one-column mobile layout to ancient browsers like IE 6-7. IE 8 is supported if you use [Respond.js][].
 
 [View Demo](http://mourner.github.com/dead-simple-grid) | [Download](https://github.com/mourner/dead-simple-grid/zipball/gh-pages)
 
@@ -29,7 +29,9 @@ It embraces concepts of progressive enhancement and mobile first, serving one-co
 }
 ```
 
-You only need `width` to set up columns; all columns are 100%-width by default, so we start from a one-column mobile layout and gradually improve it on different media query breakpoints according to available screen space (by setting widths in simple percentages). No other styles, classes or complex calculations required. As simple as that.
+Add a `col` class to each "cell" of your grid, and wrap each horizontal set of cells with a `row`-classed element.
+
+**You only need width to set up columns** in CSS; they are 100%-width by default, so we start from a one-column mobile layout and then gradually improve it according to available screen space. We do this by setting widths in simple percentages for each media query breakpoint. No other styles, classes or calculations necessary.
 
 ### Explanation
 
@@ -43,12 +45,13 @@ All `col` elements are places inside clearfixed `row` elements and have `float: 
 
 Need to turn 3 one-column elements into 3 columns? Set their width to `33.33%` and you're all set. Need to switch a 2-column block back to one-column mode? Set their width to `100%`. Forget about messing with classes or SASS/Less mixins and formulas.
 
-
 #### No Width Classes
 
-Why not define classes like `span_1_of_3` for common column widths, you say? Because this defies the purpose of true responsive design! You need to adapt *your whole grid setup* to the viewport, not just column widths, depending on *content* and its importance.
+Why not define classes like `span_1_of_3` for common column widths, you say? Because this defies the purpose of true responsive design! You need to adapt *your whole grid setup* to the viewport according to *content* and its importance.
 
-For example, you can't make 3 one-third columns turn into 1 column followed by 2 half columns with standard grid frameworks. Moreover, because of the sheer simplicity of the column set up, it doesn't take more time than figuring out what classes to add to your elements.
+Most grid frameworks will only change the container width and switch everything into one-column mode after a point, and that's it. You need to go beyond that, designing your website across the whole variety of screen sizes. And because of the sheer simplicity of the column set up in Dead Simple Grid, it doesn't take more time than figuring out what classes to add to your elements.
+
+For example, you can easily make 3 one-third columns turn into 1 (more important) column followed by 2 half columns for narrower screens. Not so easy with grid frameworks that use width classes.
 
 #### Infinite Nesting
 
@@ -59,11 +62,11 @@ Nested `row` elements get negative margin on the sides that corresponds to gutte
 .row .row { margin:  0 -1.5em; }
 ```
 
-This way you can nest rows inside columns infinitely, building layouts of any complexity. Feel free to change the value `1.5em` to anything you like (or even different for various elements).
+This way you can nest rows inside columns infinitely without padding adding up, building layouts of any complexity. Feel free to change the value `1.5em` to anything you like (or even different for various elements).
 
 #### Mobile First and Browser Support
 
-The `box-sizing` property is widely supported, starting from IE 8. CSS3 Media queries are supported by all modern browsers, and a polyfill (Respond.js) can be used to cover IE 8. Due to mobile first approach (we start from one column layout and build from there), older browsers which don't support both features (e.g. IE 6-7) receive a mobile layout which is perfectly accessible. So you have everyone covered nicely.
+The `box-sizing` property is widely supported, starting from IE 8. CSS3 Media queries are supported by all modern browsers, and a polyfill ([Respond.js][]) can be used to cover IE 8. Due to mobile first approach (we start from one column layout and build from there), older browsers which don't support both features (e.g. IE 6-7) receive a mobile layout which is perfectly accessible. So you have everyone covered nicely.
 
 ### Thanks
 
@@ -71,3 +74,5 @@ This tiny work was inspired by the following articles:
 
  * [Building a Modern Grid System](http://www.netmagazine.com/tutorials/building-modern-grid-system) by [Jonathan Smiley](http://www.zurb.com/about/profile/jonathan-smiley)
  * [Looking Beyond Common Media Query Breakpoints](http://mobile.smashingmagazine.com/2012/10/24/beyond-common-media-query-breakpoints/) by [Drew Thomas](http://brolik.com)
+
+ [Respond.js]: https://github.com/scottjehl/Respond

@@ -24,6 +24,10 @@ p, ul {
 	line-height: 1.5;
 	margin: 0 0 1.5em;
 }
+iframe {
+	border: 0;
+	overflow: hidden;
+}
 
 .container {
 	margin: 0 auto;
