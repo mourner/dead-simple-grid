@@ -1,15 +1,15 @@
 Dead Simple Grid
 ================
 
-Dead Simple Grid is a responsive CSS grid micro framework by [Vladimir Agafonkin](http://agafonkin.com/en) (creator of [Leaflet](http://leafletjs.com)) that is just that. Dead simple. It's the *Malevich's Black Square* of grid frameworks.
+Dead Simple Grid is a responsive CSS grid micro framework/concept by [Vladimir Agafonkin](http://agafonkin.com/en) (creator of [Leaflet](http://leafletjs.com)) that is just that. Dead simple. It's the *Malevich's Black Square* of grid frameworks.
 
- * tiny (about 250 bytes of CSS), no dependencies
- * only two classes (`row` and `col`)
- * fluid columns with fixed gutters
- * supports infinite nesting
- * incredibly flexible (use any column setup and media query breakpoints)
-
-It embraces concepts of progressive enhancement and mobile first, serving one-column mobile layout to ancient browsers like IE 6-7. IE 8 is supported if you use [Respond.js][].
+ * tiny (about **250 bytes** of CSS), no dependencies
+ * only **two classes** (`row` and `col`)
+ * fluid columns with **fixed gutters**
+ * supports **infinite nesting**
+ * allows true **responsive design** (change column setup in media queries)
+ * supports all major browsers starting from IE&nbsp;8, serving one-column mobile layout to older browsers
+ * built with progressive enhancement and mobile first concepts in mind
 
 [View Demo](http://mourner.github.com/dead-simple-grid) | [Download](https://github.com/mourner/dead-simple-grid/zipball/gh-pages)
 
@@ -66,7 +66,9 @@ This way you can nest rows inside columns infinitely without padding adding up, 
 
 #### Mobile First and Browser Support
 
-The `box-sizing` property is widely supported, starting from IE 8. CSS3 Media queries are supported by all modern browsers, and a polyfill ([Respond.js][]) can be used to cover IE 8. Due to mobile first approach (we start from one column layout and build from there), older browsers which don't support both features (e.g. IE 6-7) receive a mobile layout which is perfectly accessible. So you have everyone covered nicely.
+The `box-sizing` property is widely supported, starting from IE 8. CSS3 Media queries are supported by all modern browsers, and a polyfill ([Respond.js][]) can be used to cover IE 8. Due to mobile first approach (we start from one column layout and build from there), older browsers which don't support both features (e.g. IE 6&ndash;7) receive a mobile layout which is perfectly accessible. So you have everyone covered nicely.
+
+---
 
 ### Thanks
 
