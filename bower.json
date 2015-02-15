@@ -1,0 +1,20 @@
+{
+  "name": "dead-simple-grid-scss",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mourner/dead-simple-grid",
+  "authors": [
+    "Vladimir Agafonkin <agafonkin@gmail.com>",
+    "Hassan Khan <contact@hassankhan.me>"
+  ],
+  "keywords": [
+    "grid"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
