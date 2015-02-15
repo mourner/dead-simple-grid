@@ -1,0 +1,30 @@
+/* Dead Simple Grid (c) 2012 Vladimir Agafonkin */
+/* Ported to SCSS by Hassan Khan */
+
+$h-padding : 1.5em;
+
+.col {
+    padding: 0 $h-padding;
+}
+.row .row {
+    margin: 0 (-$h-padding);
+}
+
+.row:before, .row:after {
+    content: "";
+    display: table;
+}
+.row:after {
+    clear: both;
+}
+
+@media only screen {
+    .col {
+        float: left;
+        width: 100%;
+
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+}
