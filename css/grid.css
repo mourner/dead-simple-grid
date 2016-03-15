@@ -3,11 +3,11 @@
 .row .row { margin:  0 -1.5em; }
 .col      { padding: 0  1.5em; }
 
-.row:before, .row:after {
+.row:after {
     content: "";
+    clear: both;
     display: table;
 }
-.row:after { clear: both; }
 
 @media only screen { .col {
     float: left;
