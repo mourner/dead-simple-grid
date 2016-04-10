@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+	<title>Dead Simple Grid</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<!-- a grid framework in 250 bytes? are you kidding me?! -->
+	<link rel="stylesheet" href="css/grid.css">
+
+	<!-- all the important responsive layout stuff -->
+	<style>
+		.container { max-width: 90em; }
+
+		/* you only need width to set up columns; all columns are 100%-width by default, so we start
+		   from a one-column mobile layout and gradually improve it according to available screen space */
+
+		@media only screen and (min-width: 34em) {
+			.feature, .info { width: 50%; }
+		}
+
+		@media only screen and (min-width: 54em) {
+			.content { width: 66.66%; left: 33.33%;}
+			.sidebar { width: 33.33%; right: 66.66%;}
+			.info    { width: 100%;   }
+		}
+
+		@media only screen and (min-width: 76em) {
+			.content { width: 58.33%; left: 41.66%;} /* 7/12 */
+			.sidebar { width: 41.66%; right: 58.33%;} /* 5/12 */
+			.info    { width: 50%;    }
+		}
+	</style>
+
+	<!-- general boring stuff and some visual tweaks -->
+	<link rel="stylesheet" href="css/screen.css">
+
+</head>
+<body>
+
+<div class="container">
+
+	<div class="row col">
+		<h1>Dead Simple Grid</h1>
+	</div>
+
+	<div class="row">
+		<div class="col content">
+			<h2>As Simple As Responsive Grids Get</h2>
+			<p class="desc">A demo of <em>Dead Simple Grid</em> by <a href="http://agafonkin.com/en">Vladimir Agafonkin</a>. <em>View the source</em> and <a href="http://github.com/mourner/dead-simple-grid">check it out on GitHub</a>!</p>
+
+			<p class="intro">Dead Simple Grid is a responsive CSS grid micro framework that is just that. Dead simple. It's the <em>Malevich's Black Square</em> of grid frameworks. It is <em>tiny</em> (about 250 bytes of CSS) and without dependencies,
+has only two classes (<code>row</code> and <code>col</code>), fluid columns with <em>fixed gutters</em>, supports <em>infinite nesting</em>, and doesn't constrain you to any column sets or media query breakpoints. It embraces concepts of progressive enhancement and mobile first, serving one-column mobile layout to older browsers (IE 6-7). IE 8 is supported if you use <a href="https://github.com/scottjehl/Respond">Respond.js</a></p>
+
+			<div class="row">
+				<div class="col feature">
+					<h4>Feature Block One</h4>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				</div>
+
+				<div class="col feature">
+					<h4>Feature Block Two</h4>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				</div>
+			</div>
+
+			<h3>And One Last Thing</h3>
+
+			<p>Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+		</div>
+
+		<div class="col sidebar">
+
+			<h2>A Simple Sidebar</h2>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+
+			<div class="row">
+				<div class="col info">
+					<h4>Info Block One</h4>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+				</div>
+
+				<div class="col info">
+					<h4>Info Block Two</h4>
+
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+				</div>
+			</div>
+
+			<p class="social">
+				<iframe src="http://ghbtns.com/github-btn.html?user=mourner&amp;repo=dead-simple-grid&amp;type=watch&amp;count=true" width="84" height="20"></iframe>
+  				<iframe src="http://ghbtns.com/github-btn.html?user=mourner&amp;repo=dead-simple-grid&amp;type=fork&amp;count=true" width="84" height="20"></iframe>
+  				<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://github.com/mourner/dead-simple-grid" data-text="Dead Simple Grid — a 250-byte responsive CSS grid framework that is just that. Dead simple." data-related="LeafletJS">Tweet</a>
+  			</p>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
